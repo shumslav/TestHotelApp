@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -65,4 +66,34 @@ dependencies {
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
+
+    //Retrofit
+    def RetrofitVersion = '2.9.0'
+    implementation "com.squareup.retrofit2:retrofit:$RetrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$RetrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:$RetrofitVersion"
+
+    //Dagger 2
+    def DaggerVersion = '2.46.1'
+    kapt "com.google.dagger:dagger-compiler:$DaggerVersion"
+    implementation "com.google.dagger:dagger:$DaggerVersion"
+
+    //Picasso
+    def PicassoVersion = "2.71828"
+    implementation "com.squareup.picasso:picasso:$PicassoVersion"
+
+    //Navigation
+    def NavigationVersion = "2.6.0"
+    implementation "androidx.navigation:navigation-fragment-ktx:$NavigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$NavigationVersion"
+
+    //RxJava
+    def RxJavaVersion = '3.1.6'
+    def RxAndroidVersion = '3.0.2'
+    implementation "io.reactivex.rxjava3:rxjava:$RxJavaVersion"
+    implementation "io.reactivex.rxjava3:rxandroid:$RxAndroidVersion"
+
+    //ViewPager2
+    def ViewPagerVersion = "1.1.0-beta02"
+    implementation "androidx.viewpager2:viewpager2:$ViewPagerVersion"
 }
