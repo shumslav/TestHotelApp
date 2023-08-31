@@ -96,4 +96,8 @@ dependencies {
     //ViewPager2
     def ViewPagerVersion = "1.1.0-beta02"
     implementation "androidx.viewpager2:viewpager2:$ViewPagerVersion"
+
+    //FlowLayout
+    def FlowLayoutVersion
+    implementation 'com.github.st235:flow-layout:1.2.2'
 }

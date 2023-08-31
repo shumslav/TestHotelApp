@@ -2,15 +2,16 @@
 <resources>
 
     <style name="Theme.TestHotelApp" parent="android:Theme.Material.Light.NoActionBar" >
-        <item name="android:textViewStyle">@style/FontTextView</item>
+        <item name="android:textViewStyle">@style/TextView</item>
     </style>
 
     <style name="NoShadowCardView" parent="Widget.MaterialComponents.CardView">
         <item name="cardElevation">0dp</item>
     </style>
 
-    <style name="FontTextView" parent="android:Widget.TextView">
+    <style name="TextView" parent="android:Widget.TextView">
         <item name="android:fontFamily">@font/sf_pro_display</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
 

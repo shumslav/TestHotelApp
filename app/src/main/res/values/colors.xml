@@ -11,4 +11,6 @@
     <color name="background_card_rating">#33FFC700</color>
     <color name="text_color_address">#0D72FF</color>
     <color name="text_color_flying">#828796</color>
+    <color name="background_card_options">#FBFBFC</color>
+    <color name="background_card_button">#0D72FF</color>
 </resources>

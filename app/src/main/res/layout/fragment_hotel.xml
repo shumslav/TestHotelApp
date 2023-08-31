@@ -9,121 +9,360 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#f6f6f9">
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:context=".HotelFragment">
 
-            <androidx.cardview.widget.CardView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="12dp"
-                android:layout_marginBottom="4dp">
+                android:orientation="vertical">
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingHorizontal="16dp"
-                    android:paddingTop="19dp"
-                    android:paddingBottom="16dp">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="22dp"
-                        android:layout_gravity="center_horizontal"
-                        android:text="Отель"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <androidx.cardview.widget.CardView
-                        style="@style/NoShadowCardView"
-                        android:layout_width="match_parent"
-                        android:layout_height="257dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="16dp"
-                        app:cardCornerRadius="15dp">
-
-                        <androidx.viewpager2.widget.ViewPager2
-                            android:id="@+id/photos_pager"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        style="@style/NoShadowCardView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="29dp"
-                        android:layout_marginTop="16dp"
-                        app:cardCornerRadius="5dp">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="@color/background_card_rating"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:paddingHorizontal="10dp">
-
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_marginTop="1.5dp"
-                                android:src="@drawable/star" />
-
-                            <TextView
-                                android:id="@+id/rating"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="2dp"
-                                android:textColor="@color/text_color_rating"
-                                android:textSize="16sp" />
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:id="@+id/name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:textColor="@color/black"
-                        android:textSize="22sp" />
-
-                    <TextView
-                        android:id="@+id/address"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:textColor="@color/text_color_address"
-                        android:textSize="14sp" />
+                    android:layout_marginTop="-12dp"
+                    android:layout_marginBottom="4dp"
+                    style="@style/NoShadowCardView"
+                    app:cardCornerRadius="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="vertical"
+                        android:paddingHorizontal="16dp"
+                        android:paddingTop="31dp"
+                        android:paddingBottom="16dp">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="50dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Отель"
                             android:textColor="@color/black"
-                            android:textSize="30sp" />
+                            android:textSize="18sp" />
+
+                        <androidx.cardview.widget.CardView
+                            style="@style/NoShadowCardView"
+                            android:layout_width="match_parent"
+                            android:layout_height="257dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="16dp"
+                            app:cardCornerRadius="15dp">
+
+                            <androidx.viewpager2.widget.ViewPager2
+                                android:id="@+id/photos_pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            style="@style/NoShadowCardView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="29dp"
+                            android:layout_marginTop="16dp"
+                            app:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@color/background_card_rating"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingHorizontal="10dp">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginTop="1.5dp"
+                                    android:src="@drawable/star" />
+
+                                <TextView
+                                    android:id="@+id/rating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="2dp"
+                                    android:textColor="@color/text_color_rating"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
 
                         <TextView
+                            android:id="@+id/name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:textColor="@color/text_color_flying" />
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:id="@+id/address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/text_color_address"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/text_color_flying" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    style="@style/NoShadowCardView"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="16dp"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Об отеле"
+                            android:textSize="22sp" />
+
+                        <st235.com.github.flowlayout.FlowLayout
+                            android:id="@+id/flow_layout_special"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp" />
+
+                        <TextView
+                            android:id="@+id/description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+
+                        <androidx.cardview.widget.CardView
+                            style="@style/NoShadowCardView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/background_card_options"
+                            app:cardCornerRadius="15dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="15dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/__emoji_happy"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/emoji_happy" />
+
+                                    <TextView
+                                        android:id="@+id/__text_conveniences"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="12dp"
+                                        android:layout_toEndOf="@id/__emoji_happy"
+                                        android:maxLines="1"
+                                        android:text="Удобства"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:id="@+id/__text_more_important_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/__text_conveniences"
+                                        android:layout_alignStart="@id/__text_conveniences"
+                                        android:text="Самое необходимое"
+                                        android:textColor="#828796"
+                                        android:textSize="14sp" />
+
+                                    <ImageView
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginEnd="8dp"
+                                        android:src="@drawable/arrow_right" />
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_below="@id/__text_more_important_1"
+                                        android:layout_alignStart="@id/__text_conveniences"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/line_below" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp">
+
+                                    <ImageView
+                                        android:id="@+id/__check_box_true"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/check_box_true" />
+
+                                    <TextView
+                                        android:id="@+id/__text_what_included"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="12dp"
+                                        android:layout_toEndOf="@id/__check_box_true"
+                                        android:maxLines="1"
+                                        android:text="Что включено"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:id="@+id/__text_more_important_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/__text_what_included"
+                                        android:layout_alignStart="@id/__text_what_included"
+                                        android:text="Самое необходимое"
+                                        android:textColor="#828796"
+                                        android:textSize="14sp" />
+
+                                    <ImageView
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginEnd="8dp"
+                                        android:src="@drawable/arrow_right" />
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_below="@id/__text_more_important_2"
+                                        android:layout_alignStart="@id/__text_what_included"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/line_below" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp">
+
+                                    <ImageView
+                                        android:id="@+id/__check_box_false"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/check_box_true" />
+
+                                    <TextView
+                                        android:id="@+id/__text_what_not_included"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="12dp"
+                                        android:layout_toEndOf="@id/__check_box_false"
+                                        android:maxLines="1"
+                                        android:text="Что включено"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:id="@+id/__text_more_important_3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/__text_what_not_included"
+                                        android:layout_alignStart="@id/__text_what_not_included"
+                                        android:text="Самое необходимое"
+                                        android:textColor="#828796"
+                                        android:textSize="14sp" />
+
+                                    <ImageView
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginEnd="8dp"
+                                        android:src="@drawable/arrow_right" />
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:background="@color/white"
+                    android:layout_marginTop="12dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/line_below"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:theme="@style/NoShadowCardView"
+                        app:cardCornerRadius="15dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:backgroundTint="@color/background_card_button">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="К выбору номера"
+                            android:textColor="@color/white"
+                            android:layout_marginVertical="15dp"
+                            android:textSize="16sp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
 
         </FrameLayout>
 
