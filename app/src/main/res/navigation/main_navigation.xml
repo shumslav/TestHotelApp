@@ -10,4 +10,9 @@
         android:name="com.example.testhotelapp.HotelFragment"
         android:label="HotelFragment"
         tools:layout="@layout/fragment_hotel"/>
+    <fragment
+        android:id="@+id/roomHotelFragment"
+        android:name="com.example.testhotelapp.RoomHotelFragment"
+        android:label="fragment_room_hotel"
+        tools:layout="@layout/fragment_room_hotel" />
 </navigation>
