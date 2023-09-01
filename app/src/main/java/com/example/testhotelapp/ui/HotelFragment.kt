@@ -1,4 +1,4 @@
-package com.example.testhotelapp
+package com.example.testhotelapp.ui
 
 import android.content.Context
 import android.os.Bundle

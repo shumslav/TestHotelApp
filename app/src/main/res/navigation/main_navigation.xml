@@ -7,12 +7,38 @@
 
     <fragment
         android:id="@+id/hotelFragment"
-        android:name="com.example.testhotelapp.HotelFragment"
+        android:name="com.example.testhotelapp.ui.HotelFragment"
         android:label="HotelFragment"
-        tools:layout="@layout/fragment_hotel"/>
+        tools:layout="@layout/fragment_hotel">
+        <action
+            android:id="@+id/action_hotelFragment_to_roomHotelFragment"
+            app:destination="@id/roomHotelFragment" />
+    </fragment>
     <fragment
         android:id="@+id/roomHotelFragment"
-        android:name="com.example.testhotelapp.RoomHotelFragment"
+        android:name="com.example.testhotelapp.ui.RoomHotelFragment"
         android:label="fragment_room_hotel"
-        tools:layout="@layout/fragment_room_hotel" />
+        tools:layout="@layout/fragment_room_hotel" >
+        <action
+            android:id="@+id/action_roomHotelFragment_to_bookingFragment"
+            app:destination="@id/bookingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="com.example.testhotelapp.BookingFragment"
+        android:label="fragment_booking"
+        tools:layout="@layout/fragment_booking" >
+        <action
+            android:id="@+id/action_bookingFragment_to_paidFragment"
+            app:destination="@id/paidFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paidFragment"
+        android:name="com.example.testhotelapp.PaidFragment"
+        android:label="fragment_paid"
+        tools:layout="@layout/fragment_paid" >
+        <action
+            android:id="@+id/action_paidFragment_to_hotelFragment"
+            app:destination="@id/hotelFragment" />
+    </fragment>
 </navigation>
