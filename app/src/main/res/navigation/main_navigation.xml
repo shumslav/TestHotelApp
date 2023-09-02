@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/bookingFragment"
-        android:name="com.example.testhotelapp.BookingFragment"
+        android:name="com.example.testhotelapp.ui.BookingFragment"
         android:label="fragment_booking"
         tools:layout="@layout/fragment_booking" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/paidFragment"
-        android:name="com.example.testhotelapp.PaidFragment"
+        android:name="com.example.testhotelapp.ui.PaidFragment"
         android:label="fragment_paid"
         tools:layout="@layout/fragment_paid" >
         <action

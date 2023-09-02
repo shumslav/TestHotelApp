@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.TestHotelApp" parent="android:Theme.Material.Light.NoActionBar" >
+    <style name="Theme.AppCompat.TestHotelApp" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textViewStyle">@style/TextView</item>
-    </style>
-
-    <style name="NoShadowCardView" parent="Widget.MaterialComponents.CardView">
-        <item name="cardElevation">0dp</item>
     </style>
 
     <style name="TextView" parent="android:Widget.TextView">
         <item name="android:fontFamily">@font/sf_pro_display</item>
         <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="NoShadowCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">0dp</item>
     </style>
 
 
