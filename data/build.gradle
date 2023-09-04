@@ -7,3 +7,17 @@ java {
     sourceCompatibility = JavaVersion.VERSION_1_7
     targetCompatibility = JavaVersion.VERSION_1_7
 }
+
+dependencies {
+
+    //Retrofit
+    def RetrofitVersion = '2.9.0'
+    implementation "com.squareup.retrofit2:retrofit:$RetrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$RetrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:$RetrofitVersion"
+
+    //Coroutines
+    def CoroutinesVersion = '1.6.4'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$CoroutinesVersion"
+
+}
