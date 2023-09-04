@@ -9,7 +9,15 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
+import com.example.testhotelapp.R
 import com.example.testhotelapp.databinding.FragmentHotelBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class HotelFragment : Fragment() {
 
@@ -24,7 +32,9 @@ class HotelFragment : Fragment() {
 
         val binding = FragmentHotelBinding.inflate(inflater, container, false)
 
-        binding.flowLayoutSpecial.addView(Button(requireContext()))
+        binding.buttonChooseRoom.setOnClickListener {
+            it.findNavController().navigate(R.id.action_hotelFragment_to_roomHotelFragment)
+        }
 
         return binding.root
     }

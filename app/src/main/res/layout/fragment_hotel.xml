@@ -345,6 +345,7 @@
                             android:background="@drawable/line_below" />
 
                         <androidx.cardview.widget.CardView
+                            android:id="@+id/button_choose_room"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="16dp"
