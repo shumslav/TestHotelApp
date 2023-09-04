@@ -71,6 +71,9 @@ dependencies {
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
 
+    //Modules
+    implementation project(path: ':data')
+
     //Dagger 2
     def DaggerVersion = '2.46.1'
     kapt "com.google.dagger:dagger-compiler:$DaggerVersion"
@@ -79,6 +82,11 @@ dependencies {
     //Picasso
     def PicassoVersion = "2.71828"
     implementation "com.squareup.picasso:picasso:$PicassoVersion"
+
+    //OkHttp
+    def OkHttpVersion = '4.11.0'
+    implementation "com.squareup.okhttp3:okhttp:$OkHttpVersion"
+    implementation("com.squareup.okhttp3:logging-interceptor:$OkHttpVersion")
 
     //Navigation
     def NavigationVersion = "2.6.0"
